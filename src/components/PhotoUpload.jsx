@@ -27,7 +27,9 @@ const PhotoUpload = () => {
           "Content-Type": "multipart/form-data",
           'ngrok-skip-browser-warning': 'true'
         },
-      });
+      }).then(() => {
+        window.location.reload()
+      })
       console.log(response.data);
     } catch (error) {
       console.error(error);
